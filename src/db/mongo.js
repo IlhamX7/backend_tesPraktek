@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const uri = "mongodb://127.0.0.1:27017/tesPraktek_db";
+const database = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/tesPraktek_db";
 
-mongoose.connect(uri, {
+mongoose.connect(database, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

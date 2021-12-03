@@ -1,7 +1,7 @@
 const express = require("express");
 require("./db/mongo");
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 const apiRouter = require("./routers/api");
 
 app.use(express.json());
